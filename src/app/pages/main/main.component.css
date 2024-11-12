@@ -1,0 +1,20 @@
+.full-height{
+    height:90vh; 
+    overflow: hidden; 
+}
+
+.custom-drawer{
+    width: 200px;
+}   
+
+.mat-drawer-content, .content-area{
+    height: 100%;
+    overflow: auto;
+}
+
+@media (max-width:768px){
+    .custom-drawer{
+        width: 150px;
+    }
+}
+

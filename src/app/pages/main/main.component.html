@@ -1,9 +1,128 @@
-<app-header></app-header>
-<p>main works!</p>
-<button mat-raised-button>Save</button>
-<button class="btn btn-primary">Click</button>
+<!-- <app-header></app-header>
+<app-footer></app-footer> -->
 
-<i class="fas fa-camera"></i>
+<mat-toolbar class="mat-elevation-z5">
+  <button class="btn text-light" (click)="drawer.toggle()" mat-icon-button>
+    <mat-icon>menu</mat-icon>
+  </button>
+  <div class="px-2 small">Libra</div>
+</mat-toolbar>
+
+<mat-drawer-container autosize class="full-height">
+  <mat-drawer
+    opened="true"
+    #drawer
+    mode="side"
+    position="start"
+    class="custom-drawer"
+  >
+    <mat-nav-list>
+      <mat-list-item>
+        <div class="d-grid">
+            <button mat-button>
+                <mat-icon>dashboard</mat-icon>
+                Dashboard
+            </button>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item>
+        <div class="d-grid">
+            <button mat-button>
+                <mat-icon>assignment</mat-icon>
+                Orders
+            </button>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item>
+        <div class="d-grid">
+            <button mat-button>
+                <mat-icon>restaurant</mat-icon>
+                KOT
+            </button>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item>
+        <div class="d-grid">
+            <button mat-button>
+                <mat-icon>access_time</mat-icon>
+                Reservation
+            </button>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item>
+        <div class="d-grid">
+            <button mat-button>
+                <mat-icon>people</mat-icon>
+                Customer
+            </button>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item>
+        <div class="d-grid">
+            <button mat-button>
+                <mat-icon>menu_book</mat-icon>
+                Menu
+            </button>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item>
+        <div class="d-grid">
+            <button mat-button>
+                <mat-icon>storefront</mat-icon>
+                Supplier
+            </button>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item>
+        <div class="d-grid">
+            <button mat-button>
+                <mat-icon>inventory</mat-icon>
+                Inventory
+            </button>
+        </div>
+      </mat-list-item>
+      
+      <mat-list-item>
+        <div class="d-grid">
+            <button mat-button>
+                <mat-icon>settings</mat-icon>
+                Settings
+            </button>
+        </div>
+      </mat-list-item>
+
+      
+      <!-- <mat-list-item>
+        <div class="d-grid">
+            <button mat-button>
+                <mat-icon>event</mat-icon>
+                Event
+            </button>
+        </div>
+      </mat-list-item> -->
+
+ 
+
+      
 
 
-<app-footer></app-footer>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content class="bg-dark-subtle g-0">
+    <div style="text-align: center;" class="content-area">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+
+<nav class="nav navbar bg-dark text-white fixed-bottom">
+<div>footer</div>
+</nav>

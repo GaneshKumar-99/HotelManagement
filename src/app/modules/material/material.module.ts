@@ -6,6 +6,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDrawer } from '@angular/material/sidenav';
 import { MatDrawerContainer } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+
 
 
 
@@ -18,7 +20,8 @@ import { MatListModule } from '@angular/material/list';
     MatToolbarModule,
     MatDrawer,
     MatDrawerContainer,
-    MatListModule
+    MatListModule,
+    MatSidenavModule
   ],
   exports: [
     MatButtonModule,
@@ -26,7 +29,8 @@ import { MatListModule } from '@angular/material/list';
     MatToolbarModule,
     MatDrawer,
     MatDrawerContainer,
-    MatListModule
+    MatListModule,
+    MatSidenavModule
   ]
 })
 export class MaterialModule { }
