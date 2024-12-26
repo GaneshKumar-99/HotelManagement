@@ -2,10 +2,16 @@
 <app-footer></app-footer> -->
 
 <mat-toolbar class="mat-elevation-z5">
-  <button class="btn text-light" (click)="drawer.toggle()" mat-icon-button>
-    <mat-icon>menu</mat-icon>
-  </button>
-  <div class="px-2 small">Libra</div>
+  <div>
+    <button class="btn text-light" (click)="drawer.toggle()" mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+    <div class="px-2 small">Libra</div>
+  <div class="ms-auto">
+    <a href="#" class="text-white"><i class="fa-regular fa-bell mx-1 small"></i></a>
+    <button class="btn text-light"><span class="m-1">Ajay</span> <i class="fa-regular fa-user small"></i></button>
+  </div>
 </mat-toolbar>
 
 <mat-drawer-container autosize class="full-height">
@@ -17,14 +23,21 @@
     class="custom-drawer"
   >
     <mat-nav-list>
-      <mat-list-item>
+
+      <!-- <mat-list-item>
         <div class="d-grid">
             <button mat-button routerLink="dashboard">
                 <mat-icon>dashboard</mat-icon>
                 Dashboard
             </button>
         </div>
-      </mat-list-item>
+      </mat-list-item> -->
+      <mat-list-item routerLink="dashboard">
+        <div class="d-flex flex-row small">
+          <mat-icon>dashboard</mat-icon>
+          <span>Dashboard</span>
+        </div>        
+        </mat-list-item>
 
       <mat-list-item>
         <div class="d-grid">
@@ -34,6 +47,12 @@
             </button>
         </div>
       </mat-list-item>
+      <!-- <mat-list-item routerLink="orders">
+        <div class="d-flex flex-row small">
+            <mat-icon>assignment</mat-icon>
+            Orders
+        </div>
+      </mat-list-item> -->
 
       <mat-list-item>
         <div class="d-grid">
@@ -43,6 +62,13 @@
             </button>
         </div>
       </mat-list-item>
+      <!-- <mat-list-item routerLink="kitchen-order-tickets">
+        <div class="d-flex flex-row small">
+          <mat-icon>restaurant</mat-icon>
+          KOT
+        </div>
+      </mat-list-item> -->
+
 
       <mat-list-item>
         <div class="d-grid">
